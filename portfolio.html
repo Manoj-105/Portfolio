@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Include Font Awesome (W3Schools icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <style>
     
@@ -47,11 +48,11 @@
     background-color: transparent;
     text-align: center;
     padding: 10px 20px;
-    position: fixed; /* Navbar को फिक्स किया */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* यह सुनिश्चित करेगा कि Navbar सबसे ऊपर रहे */
+    z-index: 1000; 
     animation: fadeInUp 1s ease-in-out;
 }
 
@@ -220,7 +221,7 @@
         .star:nth-child(8) { top: 20%; left: 20%; animation-delay: 7s; }
 
         .section3 {
-    margin-top: 150px; /* टॉप से पर्याप्त दूरी */
+    margin-top: 150px; 
     text-align: center;
 }
 
@@ -234,16 +235,16 @@
 
 
 .section3 h1 {
-    font-size: 38px; /* H1 को थोड़ा बड़ा किया */
+    font-size: 38px; 
     font-weight: bold;
     color: white;
-    margin-bottom: 5px; /* H1 और P के बीच का गैप कम किया */
+    margin-bottom: 5px; 
 }
 
 .section3 p {
     font-size: 18px;
-    color: rgba(255, 255, 255, 0.7); /* हल्का सफेद किया */
-    margin-top: 8px; /* P को H1 के और करीब किया */
+    color: rgba(255, 255, 255, 0.7); 
+    margin-top: 8px; 
 }
 .container {
     width: 60%;
@@ -347,9 +348,6 @@
     background-color: #a4a09c;
     color: white;
 }
-
-
-
 
 
     .section4 {
@@ -653,31 +651,24 @@
     border-radius: 10px;
     text-align: left;
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: left;
-    flex-direction: column; /* Stack elements vertically */
-    padding-bottom: 30px;
-    height: 150px;
-    margin-bottom: 10px; /* Adjust this value to reduce space */
 }
 
 .container3 h2 {
     font-size: 24px;
     font-weight: bold;
     color: white;
-    margin-bottom: 10px; /* Space between h2 and p */
+    margin-bottom: 10px;
 }
 
 .container3 p {
     font-size: 16px;
     color: white;
     margin: 0;
-    text-align: left; /* Center-align for better readability */
+    text-align: left;
 }
 
 .container3 button {
-    background-color: #323339; /* Matches body background */
+    background-color: #323339;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -686,16 +677,30 @@
     border-radius: 10px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    margin-left: auto;
-    
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 150px;
     height: 40px;
-    
 }
 
 .container3 button:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
+
+.copy-icon {
+    font-size: 18px;
+    cursor: pointer;
+    color: white;
+    margin-left: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.copy-icon:hover {
+    color: #cae2e0;
+}
+
 .copy-icon {
     font-size: 18px;
     cursor: pointer;
@@ -777,6 +782,123 @@
         transform: translateY(0); /* Move it back to the original position */
     }
 }
+.x-link {
+    text-decoration: none;
+    color: black; /* X का ओरिजिनल कलर */
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* आइकन और टेक्स्ट के बीच गैप */
+}
+
+.x-icon {
+    font-size: 20px; /* आइकन का साइज */
+    color: black; /* आइकन ब्लैक रहेगा */
+    padding: 5px; /* बॉर्डर के लिए स्पेस */
+    border: 2px solid black; /* ब्लैक बॉर्डर */
+    border-radius: 5px; /* हल्का गोल किनारा */
+}
+
+/* होवर इफेक्ट */
+.x-link:hover {
+    color: #fcfdfe; /* Twitter Blue जैसा कलर */
+}
+
+.x-link:hover .x-icon {
+    color: #f5fbfe; /* आइकन भी ब्लू हो जाए */
+    border-color: #1DA1F2; /* बॉर्डर भी ब्लू हो जाए */
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    background: #b2b2d9;
+    color: rgb(13, 13, 13);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(13, 12, 12, 0.3);
+    border: 1px solid blue;
+}
+
+.modal-content {
+    position: relative;
+    background: #b3b7ce; /* Black with transparency */
+    color: rgb(5, 5, 5);
+    padding: 0px;
+    border-radius: 10px;
+    border: 1px solid blue;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal button {
+    /* Transparent Black Background */
+    color: rgb(1, 1, 1); /* Text color for the button */
+    padding: 12px 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+    margin: 10px auto; /* Center the button */
+    width: fit-content;
+    transition: all 0.3s ease;
+}
+
+
+.modal button:hover {
+  /* Darker black on hover */
+    color: #f9faf9; /* Green text color when hovered */
+}
+/* Carousel Styles */
+.carousel-inner img {
+    width: 100%;
+    height: 320px; /* Adjust based on your requirement */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black; /* Add a darker color for arrows */
+}
+
+/* Text Animation */
+.animated-text {
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards;
+    margin-top: 20px;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.modal-content p, 
+.animated-text p {
+    color: #000; /* Pure Black */
+}
 
 
     </style>
@@ -803,9 +925,58 @@
     <div class="section2" id="Home">
         <img src="images-removebg-preview (1).png" alt="img">
         <br>
-        <button class="work-btn">
-            <span class="green-dot"></span> Open For Work
-        </button> 
+        <!-- Updated Work Button -->
+<button class="work-btn" id="workBtn">
+    <span class="green-dot"></span> Open For Work
+</button>
+
+<!-- Modal Structure -->
+<!-- Modal Structure -->
+<!-- Modal Structure -->
+<div id="workModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Hire Me</h2>
+        <p>Looking for a skilled web developer? Let's connect!</p>
+
+        <!-- Add Image Carousel -->
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="Screenshot (12).png" class="d-block w-100" alt="Image 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="Screenshot (14).png" class="d-block w-100" alt="Image 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="Screenshot (16).png" class="d-block w-100" alt="Image 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- Text Animation -->
+        <div class="animated-text">
+            <h3>Let's Build Something Amazing Together!</h3>
+            <p>Building your dream website is just a step away.</p>
+        </div>
+
+        <!-- Contact Form -->
+     
+
+        <!-- Contact Me Button (Gmail open logic) -->
+        <button class="btn" id="contactMeBtn" style="background-color:rgb(3, 246, 31);">Contact Me</button>
+    </div>
+</div>
+
+
         <h1>I'm Manoj Kumawat <br> Web Developer</h1>
         <p>"As a web developer, I specialize in creating dynamic,<br>
              user-friendly websites that not only look great <br>
@@ -814,9 +985,11 @@
         <a href="manoj.resume (1).pdf" download>
             <button class="btn"><i class="bi bi-download"></i> Download Resume</button>
         </a>
-        <button class="btn transparent-btn"><i class="bi bi-box-arrow-right"></i> Explore My Work</button>
+        
+        <a href="#explore" class="btn transparent-btn"><i class="bi bi-box-arrow-right"></i> Explore My Work
+        </a>
     </div>
-    <div class="section3">
+    <div class="section3" id="explore">
         <h6 style="color: rgb(31, 207, 207);" id="project">REAL-WORLD APPLICATIONS</h6>
         <h1>Featured Projects</h1>
         <p>Building Websites through innovative<br>Code.</p>
@@ -997,21 +1170,30 @@
             </div>
         </div>
         <div class="container3" id="contact">
-    <h2>Let's take your work forword together</h2>
-    <p>
-        <span id="email">kumawatmanoj674@gmail.com</span>
-        <i class="fas fa-copy copy-icon" onclick="copyEmail()"></i>
-    </p>
-    <button>Contact Me &#8599;</button>
-</div>
+            <h2>Let's take your work forward together</h2>
+            
+            <p>
+                <span id="email">kumawatmanoj674@gmail.com</span>
+                <i class="fas fa-copy copy-icon" onclick="copyEmail()"></i>
+            </p>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kumawatmanoj674@gmail.com" target="_blank">
+                <button>Contact Me &#8599;</button>
+            </a>
+        </div>
+        
 <hr class="footer-line">
 <div class="footer">
     
     <p>MADE WITH LOVE ❤️</p>
     <div class="social-icons">
-        <a href="#" target="_blank"><i class="fab fa-linkedin" style="color: #0dd7f6;"></i> LinkedIn &#8599;</a>
-        <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub &#8599;</a>
-        <a href="https://x.com/home" target="_blank"><i class="fab fa-twitter"></i> Twitter &#8599;</a>
+        <a href="https://www.linkedin.com/feed/" target="_blank"><i class="fab fa-linkedin" style="color: #0dd7f6;"></i> LinkedIn &#8599;</a>
+        <a href="https://github.com/Manoj-105/Portfolio" target="_blank"><i class="fab fa-github"></i> GitHub &#8599;</a>
+        <a href="https://x.com/home" target="_blank" class="x-link">
+            <i class="fab fa-x-twitter" style="color: #000000;"></i>Twitter &#8599;
+        </a>
+        
+        
+        
     </div>
 </div>
 <div class="footer-light"></div>
@@ -1031,8 +1213,58 @@
             });
         }
         </script>
+       <script>
+        document.getElementById("workBtn").addEventListener("click", function() {
+            document.getElementById("workModal").style.display = "block";
+        });
+    
+        document.querySelector(".close").addEventListener("click", function() {
+            document.getElementById("workModal").style.display = "none";
+        });
+    
+        window.onclick = function(event) {
+            var modal = document.getElementById("workModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    
+        // Gmail Open करने के लिए Function
+        document.getElementById("contactMeBtn").addEventListener("click", function() {
+            window.open("https://mail.google.com/mail/?view=cm&fs=1&to=kumawatmanoj674@gmail.com", "_blank");
+            document.getElementById("workModal").style.display = "none"; // Modal बंद कर देगा
+        });
+    </script>
+    <script>
+        // Open Modal
+        document.getElementById("workBtn").addEventListener("click", function() {
+            document.getElementById("workModal").style.display = "block";
+        });
+    
+        // Close Modal
+        document.querySelector(".close").addEventListener("click", function() {
+            document.getElementById("workModal").style.display = "none";
+        });
+    
+        // Close Modal if user clicks outside
+        window.onclick = function(event) {
+            var modal = document.getElementById("workModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    
+        // Gmail Open Button Logic
+        document.getElementById("contactMeBtn").addEventListener("click", function() {
+            window.open("https://mail.google.com/mail/?view=cm&fs=1&to=kumawatmanoj674@gmail.com", "_blank");
+            document.getElementById("workModal").style.display = "none"; // Close modal after Gmail opens
+        });
+    </script>
+    
         
 </body>
 </html>
 
 
+
+ 
