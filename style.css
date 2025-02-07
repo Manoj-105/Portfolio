@@ -1,0 +1,910 @@
+body {
+    font-family: initial;
+    margin: 0;
+    padding: 0;
+    background: #323339;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow-x: hidden;
+}
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideInLeft {
+    0% { opacity: 0; transform: translateX(-100px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    0% { opacity: 0; transform: translateX(100px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+
+nav {
+background-color: transparent;
+text-align: center;
+padding: 10px 20px;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1000; 
+animation: fadeInUp 1s ease-in-out;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 5px 8px;
+    margin: 0;
+    display: inline-block;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(5px);
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(252, 246, 246);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: rgb(34, 31, 31);
+}
+
+.section2 {
+    margin-top: 150px;
+    position: relative;
+    display: inline-block;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.3);
+    height: 600px;
+    width: 600px;
+    animation: zoomIn 1.2s ease-in-out;
+}
+
+.section2 img {
+    width: 150px;
+    height: auto;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.section2 h1 {
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
+.section2 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    color: rgb(168, 154, 154);
+    animation: slideInRight 1.5s ease-in-out;
+}
+
+.work-btn {
+    background-color: #2d2929;
+    color: white;
+    border: none;
+    padding: 7px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s ease-in-out;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.work-btn:hover {
+    background-color: #a4a09c;
+}
+
+.green-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #00ff00;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.btn {
+    background-color: white;
+    color: #141313;
+    border: none;
+    padding: 5px 12px;
+    margin: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s ease-in-out;
+    animation: fadeInUp 1.8s ease-in-out;
+}
+
+.btn:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+.btn i {
+    font-size: 18px;
+}
+
+.transparent-btn {
+    background-color: rgba(47, 45, 45, 0.2); 
+    color: white; 
+    border: 1px solid rgb(250, 247, 247);
+}
+
+.transparent-btn:hover {
+    background-color: rgba(155, 154, 154, 0.4);
+}
+
+
+.star {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px white;
+    animation: orbit 8s linear infinite;
+}
+
+.star.large {
+    width: 15px;
+    height: 15px;
+}
+
+.star.small {
+    width: 7px;
+    height: 7px;
+}
+
+
+@keyframes orbit {
+    0% { transform: rotate(0deg) translateX(250px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(250px) rotate(-360deg); }
+}
+
+
+.star:nth-child(1) { top: 50%; left: 0%; animation-delay: 0s; }
+.star:nth-child(2) { top: 80%; left: 20%; animation-delay: 1s; }
+.star:nth-child(3) { top: 90%; left: 50%; animation-delay: 2s; }
+.star:nth-child(4) { top: 80%; left: 80%; animation-delay: 3s; }
+.star:nth-child(5) { top: 50%; left: 100%; animation-delay: 4s; }
+.star:nth-child(6) { top: 20%; left: 80%; animation-delay: 5s; }
+.star:nth-child(7) { top: 10%; left: 50%; animation-delay: 6s; }
+.star:nth-child(8) { top: 20%; left: 20%; animation-delay: 7s; }
+
+.section3 {
+margin-top: 150px; 
+text-align: center;
+}
+
+.section3 h6 {
+color: rgb(68, 148, 148);
+font-size: 12px;
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-bottom: 10px;
+}
+
+
+.section3 h1 {
+font-size: 38px; 
+font-weight: bold;
+color: white;
+margin-bottom: 5px; 
+}
+
+.section3 p {
+font-size: 18px;
+color: rgba(255, 255, 255, 0.7); 
+margin-top: 8px; 
+}
+.container {
+width: 60%;
+margin: 50px auto;
+padding: 20px;
+border: 2px solid rgba(255, 255, 255, 0.3);
+border-radius: 15px;
+background-color: rgba(255, 255, 255, 0.1);
+box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+display: flex;
+align-items: center;
+justify-content: space-between;
+backdrop-filter: blur(10px);
+text-align: left;
+}
+
+.container-content {
+width: 80%;
+}
+
+.container h6 {
+font-size: 14px;
+color: #00ff00;
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-bottom: 20px;
+}
+
+.container h1 {
+font-size: 28px;
+color: white;
+margin-bottom: 30px;
+}
+
+.container hr {
+width: 40%;
+border: 0.5px solid rgba(255, 255, 255, 0.2);
+margin: 10px 0;
+}
+
+.container ul {
+list-style: none;
+padding: 0;
+}
+
+.container ul li {
+font-size: 14px;
+color: rgba(255, 255, 255, 0.8);
+margin: 10px 0;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.check-icon {
+width: 24px;
+height: 24px;
+background-color: #5c605c;
+color: white;
+font-size: 14px;
+font-weight: bold;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.container-buttons {
+margin-top: 20px;
+}
+
+.container button {
+background-color: #2d2929;
+color: white;
+border: none;
+padding: 15px 18px;
+font-size: 14px;
+font-weight: bold;
+border-radius: 10px;
+cursor: pointer;
+transition: 0.3s ease-in-out;
+margin-right: 10px;
+}
+
+.container button:hover {
+background-color: #a4a09c;
+}
+
+.container img {
+width: 450px;
+height: 300px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+.container button:first-child {
+background-color: white;
+color: black;
+}
+
+.container button:first-child:hover {
+background-color: #a4a09c;
+color: white;
+}
+
+
+
+
+
+.section4 {
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(20,224,181,1) 0%, rgba(15,74,181,1) 62%);
+width: 100%; /* Full width */
+height: 60px; /* Height of the strip */
+display: flex; /* To align items in a row */
+justify-content: flex-start; /* Align the items to the start */
+align-items: center; /* Vertically center the text */
+overflow: hidden; /* Hide any overflow */
+position: relative; /* To apply animation */
+margin-top: 150px;
+transform: skewY(-5deg); /* Tilt the div to the left */
+}
+
+.section4 ul {
+display: flex;
+list-style: none; /* Remove bullet points */
+padding: 0;
+margin: 0;
+gap: 30px; /* Increased gap between text items */
+animation: scrollBothWays 15s linear infinite; /* Right to left and left to right scrolling */
+}
+
+.section4 li {
+display: flex;
+align-items: center; /* Center the content vertically */
+font-size: 15px; /* Adjust the font size */
+color: #0f0f0f; /* Dark color for the text */
+}
+
+.section4 li::before {
+content: '★'; /* Star symbol before each item */
+font-size: 20px; /* Size of the star */
+margin-right: 15px; /* Space between star and text */
+color: #080808; /* Gold color for the star */
+font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Animation for scrolling from both sides */
+@keyframes scrollBothWays {
+0% {
+    transform: translateX(100%); /* Start from the right */
+}
+25% {
+    transform: translateX(0); /* Stop at the center */
+}
+50% {
+    transform: translateX(-100%); /* Start from the left */
+}
+75% {
+    transform: translateX(0); /* Stop at the center */
+}
+100% {
+    transform: translateX(100%); /* Start from the right again */
+}
+}
+
+
+.section5 {
+    margin-top: 100px;
+    text-align: center;
+    color: white;
+}
+
+.section5 h6 {
+    color: rgb(31, 207, 207);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.section5 h1 {
+    font-size: 33px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.section5 p {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 8px;
+}
+
+.container2 {
+    width: 60%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    text-align: left;
+    position: relative;
+}
+
+.container2 h2 {
+    font-size: 24px;
+    color: white;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.container2 p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 10px;
+}
+
+.green-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #0dd7f6;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Keyframes for left to right animation (for the top row) */
+.container2 {
+width: 60%;
+margin: 50px auto;
+padding: 20px;
+background-color: rgba(255, 255, 255, 0.1);
+box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+backdrop-filter: blur(10px);
+border: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 10px;
+text-align: left;
+position: relative;
+overflow: hidden; /* Hide content outside the container */
+}
+
+.icons {
+display: flex;
+justify-content: flex-start;
+margin-top: 10px;
+gap: 10px;
+}
+
+/* Top icons (scroll left to right) */
+.top-icons {
+display: flex;
+flex-wrap: nowrap;
+gap: 10px;
+animation: scrollLeftToRight 10s linear infinite;
+}
+
+/* Bottom icons (scroll right to left) */
+.bottom-icons {
+display: flex;
+flex-wrap: nowrap;
+gap: 10px;
+animation: scrollRightToLeft 10s linear infinite;
+}
+
+/* Left to Right Animation */
+@keyframes scrollLeftToRight {
+0% {
+transform: translateX(-100%); /* Start from the left */
+}
+100% {
+transform: translateX(0); /* Move to the center */
+}
+}
+
+/* Right to Left Animation */
+@keyframes scrollRightToLeft {
+0% {
+transform: translateX(100%); /* Start from the right */
+}
+100% {
+transform: translateX(0); /* Move to the center */
+}
+}
+
+/* Icon Box Styles */
+.icon-box {
+width: 150px; /* Adjust width */
+height: 40px; /* Adjust height */
+display: flex;
+flex-direction: row; /* Align icon and text horizontally */
+align-items: center;
+justify-content: center; /* Horizontally center the icon and text */
+border: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
+background-color: rgba(255, 255, 255, 0.2);
+color: white;
+transition: transform 0.3s ease-in-out;
+font-size: 14px;
+text-align: center;
+padding: 5px;
+margin: 5px;
+}
+
+.icon-box i {
+font-size: 24px;
+margin-right: 5px; /* Reduced space between the icon and the text */
+}
+
+.icon-box span {
+font-size: 12px;
+font-weight: bold;
+}
+
+.icon-box:hover {
+transform: scale(1.1); /* Add hover effect */
+}
+
+/* Colorful icons */
+.icon-html { background-color: #323339; }
+.icon-css { background-color: #323339; }
+.icon-js { background-color: #323339; }
+.icon-python { background-color: #323339; }
+.icon-chatgpt { background-color: #323339; }
+.icon-w3schools { background-color: #323339; }
+
+.icon-box span {
+font-size: 16px;
+font-weight: bold;
+margin-top: 5px; /* Space between the text and icon */
+}
+/* Button Styles for hobbies */
+/* Button Styles for hobbies */
+.hobbies {
+    width: 60%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    text-align: left;
+    position: relative;
+}
+
+.hobbies button {
+    background: radial-gradient(circle, rgb(5, 248, 232) 0%, rgb(145, 227, 227) 100%);
+    border: none;
+    padding: 10px 25px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 40px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 30px;
+    position: relative;
+}
+
+.hobbies button:hover {
+    background-color: #008b8b;
+    box-shadow: 0 4px 12px rgba(0, 191, 255, 0.5);
+}
+#lyricsWriting:hover{
+    transform: translatex(800px);
+    transition:3s;
+     
+}#sleeping:hover{
+    transform: rotateY(-360deg);
+    transition:3s;
+     
+}#reading:hover{
+    transform:perspective(70px) translateZ(100px);
+    transition:2s;
+    
+     
+}#travelling:hover{
+    transform: translate(80px);
+    transition:3s;
+     
+}#popRapping:hover{
+    transform: translateY(900px);
+    transition:2s;
+     
+}#music:hover{
+    transform: translateY(80px);
+    transition:3s;
+     
+}#cooking:hover{
+    transform: skew(360deg);
+    transition:3s;
+    transform-origin: 100% 0%;
+
+     
+}
+
+.hobbies .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.hobbies .button-container .button-row {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+}
+
+.hobbies button i {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    .hobbies .button-container .button-row {
+        flex: 0 0 48%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .hobbies .button-container .button-row {
+        flex: 0 0 100%;
+    }
+}
+.container3 {
+width: 60%;
+margin: 130px auto;
+padding: 20px;
+background: radial-gradient(circle, rgba(5, 248, 232, 0.8) 0%, rgba(15, 74, 181, 0.8) 100%);
+box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+backdrop-filter: blur(10px);
+border: 2px solid rgba(255, 255, 255, 0.5);
+border-radius: 10px;
+text-align: left;
+position: relative;
+}
+
+.container3 h2 {
+font-size: 24px;
+font-weight: bold;
+color: white;
+margin-bottom: 10px;
+}
+
+.container3 p {
+font-size: 16px;
+color: white;
+margin: 0;
+text-align: left;
+}
+
+.container3 button {
+background-color: #323339;
+color: white;
+border: none;
+padding: 10px 20px;
+font-size: 16px;
+font-weight: bold;
+border-radius: 10px;
+cursor: pointer;
+transition: 0.3s ease-in-out;
+position: absolute;
+right: 20px;
+top: 50%;
+transform: translateY(-50%);
+width: 150px;
+height: 40px;
+}
+
+.container3 button:hover {
+background-color: rgba(255, 255, 255, 0.2);
+}
+
+.copy-icon {
+font-size: 18px;
+cursor: pointer;
+color: white;
+margin-left: 10px;
+transition: color 0.3s ease-in-out;
+}
+
+.copy-icon:hover {
+color: #cae2e0;
+}
+
+.copy-icon {
+font-size: 18px;
+cursor: pointer;
+color: white;
+margin-left: 10px;
+transition: color 0.3s ease-in-out;
+}
+
+.copy-icon:hover {
+color: #cae2e0;
+}
+.footer {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 20px;
+width: 60%;
+margin: 10px auto;
+}
+
+.footer-line {
+width: 60%;
+border: 0.5px solid rgba(255, 255, 255, 0.3);
+margin-left: 270px;
+margin-top: 100px;
+}
+
+.footer p {
+font-size: 14px;
+color: rgba(255, 255, 255, 0.7);
+margin: 0;
+}
+
+.social-icons {
+display: flex;
+gap: 15px;
+}
+
+.social-icons a {
+text-decoration: none;
+color: white;
+font-size: 14px;
+display: flex;
+align-items: center;
+gap: 5px;
+transition: color 0.3s ease-in-out;
+}
+
+.social-icons a i {
+font-size: 16px;
+}
+
+.social-icons a:hover {
+color: #00ffea;
+}
+
+/* Styling for the blue light effect below the footer */
+/* Styling for the blue light effect below the footer */
+.footer-light {
+width: 100%;
+height: 100px; /* Height of the light effect */
+background: linear-gradient(to top, rgba(246, 246, 248, 0.3), rgba(3, 3, 251, 0) 70%); /* Blue light fading */
+position: absolute;
+bottom: -35px; /* Initially place it below the footer */
+left: 0;
+z-index: -1; /* Ensure it sits behind the footer */
+animation: moveUpDown 5s ease-in-out infinite; /* Animation for up and down movement */
+}
+
+/* Keyframe animation for moving the light up and down */
+@keyframes moveUpDown {
+0% {
+transform: translateY(0); /* Start from the initial position */
+}
+50% {
+transform: translateY(-20px); /* Move it up */
+}
+100% {
+transform: translateY(0); /* Move it back to the original position */
+}
+}
+.x-link {
+text-decoration: none;
+color: black; /* X का ओरिजिनल कलर */
+font-weight: bold;
+font-size: 18px;
+display: flex;
+align-items: center;
+gap: 5px; /* आइकन और टेक्स्ट के बीच गैप */
+}
+
+.x-icon {
+font-size: 20px; /* आइकन का साइज */
+color: black; /* आइकन ब्लैक रहेगा */
+padding: 5px; /* बॉर्डर के लिए स्पेस */
+border: 2px solid black; /* ब्लैक बॉर्डर */
+border-radius: 5px; /* हल्का गोल किनारा */
+}
+
+/* होवर इफेक्ट */
+.x-link:hover {
+color: #fcfdfe; /* Twitter Blue जैसा कलर */
+}
+
+.x-link:hover .x-icon {
+color: #f5fbfe; /* आइकन भी ब्लू हो जाए */
+border-color: #1DA1F2; /* बॉर्डर भी ब्लू हो जाए */
+}
+.modal {
+display: none;
+position: fixed;
+z-index: 1000;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+width: 40%;
+background: #b2b2d9;
+color: rgb(13, 13, 13);
+padding: 20px;
+border-radius: 10px;
+text-align: center;
+box-shadow: 0 0 10px rgba(13, 12, 12, 0.3);
+border: 1px solid blue;
+}
+
+.modal-content {
+position: relative;
+background: #b3b7ce; /* Black with transparency */
+color: rgb(5, 5, 5);
+padding: 0px;
+border-radius: 10px;
+border: 1px solid blue;
+text-align: center;
+box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+margin-top: 40px;
+}
+
+
+.close {
+position: absolute;
+right: 10px;
+top: 10px;
+font-size: 20px;
+cursor: pointer;
+}
+
+.modal button {
+
+color: rgb(1, 1, 1); /* Text color for the button */
+padding: 12px 25px;
+font-weight: bold;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+margin-top: 10px;
+display: block;
+margin: 10px auto; /* Center the button */
+width: fit-content;
+transition: all 0.3s ease;
+}
+
+
+.modal button:hover {
+/* Darker black on hover */
+color: #f9faf9; /* Green text color when hovered */
+}
+
+
+@keyframes fadeInUp {
+0% {
+opacity: 0;
+transform: translateY(50px);
+}
+100% {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+
+.modal-content p {
+color: #000; /* Pure Black */
+}
+.modal-content h3 {
+    font-size: 50px;
+    line-height: 100px;
+    transition: 0.3s ease;
+}
