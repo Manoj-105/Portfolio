@@ -148,6 +148,7 @@ nav ul li a:hover {
     gap: 10px;
     transition: 0.3s ease-in-out;
     animation: fadeInUp 1.8s ease-in-out;
+    
 }
 
 .btn:hover {
@@ -483,16 +484,17 @@ gap: 10px;
 display: flex;
 flex-wrap: nowrap;
 gap: 10px;
-animation: scrollLeftToRight 10s linear infinite;
+animation: scrollLeftToRight 10s linear 2;
 }
 
 /* Bottom icons (scroll right to left) */
 .bottom-icons {
-display: flex;
-flex-wrap: nowrap;
-gap: 10px;
-animation: scrollRightToLeft 10s linear infinite;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  animation: scrollRightToLeft 10s linear 2;
 }
+
 
 /* Left to Right Animation */
 @keyframes scrollLeftToRight {
@@ -661,6 +663,7 @@ margin-top: 5px; /* Space between the text and icon */
 }
 .container3 {
 width: 60%;
+height: 140px;
 margin: 130px auto;
 padding: 20px;
 background: radial-gradient(circle, rgba(5, 248, 232, 0.8) 0%, rgba(15, 74, 181, 0.8) 100%);
@@ -668,7 +671,7 @@ box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 backdrop-filter: blur(10px);
 border: 2px solid rgba(255, 255, 255, 0.5);
 border-radius: 10px;
-text-align: left;
+text-align: center;
 position: relative;
 }
 
@@ -683,7 +686,7 @@ margin-bottom: 10px;
 font-size: 16px;
 color: white;
 margin: 0;
-text-align: left;
+text-align: center;
 }
 
 .container3 button {
@@ -776,57 +779,56 @@ font-size: 16px;
 color: #00ffea;
 }
 
-/* Styling for the blue light effect below the footer */
-/* Styling for the blue light effect below the footer */
+
 .footer-light {
 width: 100%;
-height: 100px; /* Height of the light effect */
-background: linear-gradient(to top, rgba(246, 246, 248, 0.3), rgba(3, 3, 251, 0) 70%); /* Blue light fading */
+height: 100px; 
+background: linear-gradient(to top, rgba(246, 246, 248, 0.3), rgba(3, 3, 251, 0) 70%); 
 position: absolute;
-bottom: -35px; /* Initially place it below the footer */
+bottom: -35px; 
 left: 0;
-z-index: -1; /* Ensure it sits behind the footer */
-animation: moveUpDown 5s ease-in-out infinite; /* Animation for up and down movement */
+z-index: -1; 
+animation: moveUpDown 5s ease-in-out infinite; 
 }
 
-/* Keyframe animation for moving the light up and down */
+
 @keyframes moveUpDown {
 0% {
-transform: translateY(0); /* Start from the initial position */
+transform: translateY(0); 
 }
 50% {
-transform: translateY(-20px); /* Move it up */
+transform: translateY(-20px); 
 }
 100% {
-transform: translateY(0); /* Move it back to the original position */
+transform: translateY(0); 
 }
 }
 .x-link {
 text-decoration: none;
-color: black; /* X का ओरिजिनल कलर */
+color: black; 
 font-weight: bold;
 font-size: 18px;
 display: flex;
 align-items: center;
-gap: 5px; /* आइकन और टेक्स्ट के बीच गैप */
+gap: 5px; 
 }
 
 .x-icon {
-font-size: 20px; /* आइकन का साइज */
-color: black; /* आइकन ब्लैक रहेगा */
-padding: 5px; /* बॉर्डर के लिए स्पेस */
-border: 2px solid black; /* ब्लैक बॉर्डर */
-border-radius: 5px; /* हल्का गोल किनारा */
+font-size: 20px;
+color: black; 
+padding: 5px; 
+border: 2px solid black; 
+border-radius: 5px;
 }
 
-/* होवर इफेक्ट */
+
 .x-link:hover {
-color: #fcfdfe; /* Twitter Blue जैसा कलर */
+color: #fcfdfe; 
 }
 
 .x-link:hover .x-icon {
-color: #f5fbfe; /* आइकन भी ब्लू हो जाए */
-border-color: #1DA1F2; /* बॉर्डर भी ब्लू हो जाए */
+color: #f5fbfe;
+border-color: #1DA1F2; 
 }
 .modal {
 display: none;
@@ -847,7 +849,7 @@ border: 1px solid blue;
 
 .modal-content {
 position: relative;
-background: #b3b7ce; /* Black with transparency */
+background: #b3b7ce; 
 color: rgb(5, 5, 5);
 padding: 0px;
 border-radius: 10px;
@@ -868,7 +870,7 @@ cursor: pointer;
 
 .modal button {
 
-color: rgb(1, 1, 1); /* Text color for the button */
+color: rgb(1, 1, 1); 
 padding: 12px 25px;
 font-weight: bold;
 border: none;
@@ -876,15 +878,15 @@ border-radius: 5px;
 cursor: pointer;
 margin-top: 10px;
 display: block;
-margin: 10px auto; /* Center the button */
+margin: 10px auto; 
 width: fit-content;
 transition: all 0.3s ease;
 }
 
 
 .modal button:hover {
-/* Darker black on hover */
-color: #f9faf9; /* Green text color when hovered */
+
+color: #f9faf9; 
 }
 
 
@@ -901,10 +903,579 @@ transform: translateY(0);
 
 
 .modal-content p {
-color: #000; /* Pure Black */
+color: #000; 
 }
 .modal-content h3 {
     font-size: 50px;
     line-height: 100px;
     transition: 0.3s ease;
+}
+/* Responsive Styling */
+
+
+@media (max-width: 768px) {
+  .section2 {
+    width: 90vw;
+    height: auto; 
+    border-radius: 30px; 
+    padding: 20px;
+    margin-top: 100px;
+  }
+
+  .section2 img {
+    width: 100px;
+  }
+
+  .section2 h1 {
+    font-size: 32px;
+  }
+
+  .section2 p {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .work-btn,
+  .btn {
+    font-size: 13px;
+    padding: 6px 14px;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .btn i {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section2 {
+    padding: 15px;
+  }
+
+  .section2 h1 {
+    font-size: 26px;
+  }
+
+  .section2 img {
+    width: 80px;
+  }
+
+  .section2 p {
+    font-size: 14px;
+  }
+
+  .work-btn,
+  .btn {
+    width: 42%; 
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  
+  @keyframes orbit {
+    0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+  }
+
+  .star {
+    width: 7px;
+    height: 7px;
+  }
+
+  .star.large {
+    width: 10px;
+    height: 10px;
+  }
+
+  .star.small {
+    width: 5px;
+    height: 5px;
+  }
+
+  .section3 {
+    margin-top: 100px;
+    padding: 0 15px;
+  }
+
+  .section3 h1 {
+    font-size: 28px;
+  }
+
+  .section3 p {
+    font-size: 16px;
+  }
+
+  .section3 h6 {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  @keyframes orbit {
+    0% { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+  }
+
+  .star {
+    width: 5px;
+    height: 5px;
+  }
+
+  .star.large {
+    width: 7px;
+    height: 7px;
+  }
+
+  .star.small {
+    width: 3px;
+    height: 3px;
+  }
+
+  .section3 h1 {
+    font-size: 22px;
+  }
+
+  .section3 p {
+    font-size: 14px;
+  }
+
+  .section3 h6 {
+    font-size: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    flex-direction: column; 
+    text-align: center; 
+    padding: 15px;
+  }
+
+  .container-content {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .container h1 {
+    font-size: 24px;
+  }
+
+  .container h6 {
+    font-size: 12px;
+    letter-spacing: 0.8px;
+  }
+
+  .container ul li {
+    font-size: 12px;
+  }
+
+  .container img {
+    width: 100%; 
+    height: auto; 
+    margin-bottom: 20px;
+  }
+
+  .container button {
+    padding: 12px 15px;
+    font-size: 12px;
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 100%; 
+  }
+
+  .container hr {
+    width: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  .container h1 {
+    font-size: 20px;
+  }
+
+  .container h6 {
+    font-size: 11px;
+  }
+
+  .container ul li {
+    font-size: 11px;
+  }
+
+  .container button {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .container img {
+    width: 100%; 
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .section4 {
+    height: 50px;
+    margin-top: 100px;
+    transform: skewY(0deg); 
+  }
+
+  .section4 ul {
+    gap: 20px; 
+    font-size: 14px; 
+    animation: scrollBothWays 12s linear infinite; 
+  }
+
+  .section4 li {
+    font-size: 13px; 
+  }
+
+  .section4 li::before {
+    font-size: 18px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .section4 {
+    height: 40px; 
+    margin-top: 80px;
+    transform: skewY(0deg); 
+  }
+
+  .section4 ul {
+    gap: 15px; 
+    font-size: 10px; 
+    animation: scrollBothWays 10s linear infinite; 
+  }
+
+  .section4 li {
+    font-size: 11px; 
+  }
+
+  .section4 li::before {
+    font-size: 16px; 
+  }
+}
+@media (max-width: 768px) {
+  .section5 {
+    margin-top: 80px; 
+  }
+
+  .section5 h6 {
+    font-size: 10px;
+    letter-spacing: 0.8px; 
+  }
+
+  .section5 h1 {
+    font-size: 28px;
+  }
+
+  .section5 p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section5 {
+    margin-top: 60px; 
+  }
+
+  .section5 h6 {
+    font-size: 9px; 
+  }
+
+  .section5 h1 {
+    font-size: 24px;
+  }
+
+  .section5 p {
+    font-size: 12px; 
+  }
+}
+@media (max-width: 768px) {
+  .container2 {
+    width: 90%; 
+    padding: 15px; 
+    margin-top: 30px; 
+  }
+
+  .container2 h2 {
+    font-size: 20px; 
+    margin-top: 10px;
+  }
+
+  .container2 p {
+    font-size: 14px; 
+  }
+
+  .icons {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+  }
+
+  .top-icons, .bottom-icons {
+    animation: none;
+    flex-wrap: wrap; 
+    justify-content: center; 
+  }
+
+  .icon-box {
+    width: 120px; 
+    height: 35px; 
+    font-size: 12px; 
+    margin: 5px 10px; 
+  }
+
+  .icon-box i {
+    font-size: 18px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .container2 {
+    width: 95%; 
+    margin-top: 20px; 
+  }
+
+  .container2 h2 {
+    font-size: 18px; 
+  }
+
+  .container2 p {
+    font-size: 13px; 
+  }
+
+  .icon-box {
+    width: 100px; 
+    height: 30px; 
+  }
+
+  .icon-box i {
+    font-size: 16px; 
+  }
+}
+@media (max-width: 768px) {
+    .hobbies {
+        width: 90%;
+        margin-top: 30px; 
+    }
+
+    .hobbies button {
+        font-size: 14px; 
+        padding: 8px 20px;
+        height: 25px; 
+    }
+
+    .hobbies .button-container {
+        flex-direction: column;
+        gap: 15px; 
+    }
+
+    .hobbies .button-container .button-row {
+        flex: 0 0 100%; 
+    }
+}
+
+@media (max-width: 500px) {
+    .hobbies {
+        width: 95%; 
+    }
+
+    .hobbies button {
+        font-size: 12px; 
+        padding: 6px 4px; 
+        height: 20px; 
+    }
+
+    .hobbies .button-container {
+        gap: 10px; 
+    }
+
+    .hobbies button i {
+        font-size: 16px; 
+    }
+}
+
+@media (max-width: 350px) {
+  .hobbies{
+    width: 80%;
+  }
+    .hobbies button {
+        font-size: 12px; 
+        padding: 6px 15x; 
+        height: 10px; 
+    }
+    
+}
+@media (max-width: 768px) {
+    .container3 {
+        width: 90%; 
+        height: auto; 
+        margin-top: 50px;
+        padding: 15px;
+    }
+
+    .container3 h2 {
+        font-size: 22px; 
+    }
+
+    .container3 p {
+        font-size: 14px; 
+    }
+
+    .container3 button {
+        width: 130px; 
+        height: 35px; 
+        font-size: 14px; 
+    }
+}
+
+@media (max-width: 500px) {
+    .container3 {
+        width: 95%; 
+        margin-top: 20px; 
+        padding: 10px; 
+    }
+
+    .container3 h2 {
+        font-size: 20px; 
+    }
+
+    .container3 p {
+        font-size: 13px; 
+    }
+
+    .container3 button {
+        width: 120px; 
+        height: 30px; 
+        font-size: 12px; 
+    }
+}
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; 
+        text-align: center; 
+        width: 90%; 
+        margin: 20px auto; 
+    }
+
+    .footer-line {
+        width: 100%; 
+        margin-left: 0; 
+        margin-top: 50px; 
+    }
+
+    .footer p {
+        font-size: 12px; 
+    }
+
+    .social-icons {
+        gap: 10px; 
+    }
+
+    .social-icons a {
+        font-size: 12px; 
+                 margin-top: 15px;
+
+    }
+
+    .footer-light {
+        height: 60px; 
+    }
+
+    .x-link {
+        font-size: 16px; 
+    }
+
+    .x-icon {
+        font-size: 18px; 
+    }
+}
+
+@media (max-width: 500px) {
+    .footer {
+        width: 100%; 
+    }
+
+    .footer-line {
+        width: 100%; 
+        margin-left: 0;
+        margin-top: 30px; 
+    }
+
+    .footer p {
+        font-size: 10px; 
+       
+    }
+
+    .social-icons a {
+        font-size: 12px; 
+         margin-top: 15px;
+    }
+
+    .x-link {
+        font-size: 14px; 
+    }
+
+    .x-icon {
+        font-size: 16px; 
+    }
+}
+@media (max-width: 768px) {
+    .modal {
+        width: 80%; 
+        padding: 15px;
+    }
+
+    .modal-content {
+        margin-top: 30px;
+        padding: 10px;
+    }
+
+    .modal-content h3 {
+        font-size: 30px; 
+        line-height: 60px;
+    }
+
+    .modal button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal {
+        width: 90%; 
+        padding: 10px;
+        
+        
+    }
+
+    .modal-content {
+        margin-top: 20px;
+        padding: 8px;
+
+    }
+
+    .modal-content h3 {
+        font-size: 24px;
+        line-height: 40px;
+    }
+
+    .modal button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .close {
+        font-size: 18px; 
+        top: 5px;
+        right: 5px;
+    }
 }
