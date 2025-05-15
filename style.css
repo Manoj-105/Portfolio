@@ -911,7 +911,29 @@ color: #000;
     transition: 0.3s ease;
 }
 /* Responsive Styling */
+@media (max-width: 768px) {
+  nav ul {
+    padding: 5px 10px;
+  }
 
+  nav ul li {
+    margin: 0 2px;
+  }
+
+  nav ul li a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul li {
+    margin: 0 5px;
+  }
+
+  nav ul li a {
+    font-size: 12px;
+  }
+}
 
 @media (max-width: 768px) {
   .section2 {
@@ -937,7 +959,7 @@ color: #000;
 
   .work-btn,
   .btn {
-    font-size: 13px;
+    font-size: 10px;
     padding: 6px 14px;
     gap: 6px;
     flex-wrap: wrap;
@@ -1252,7 +1274,7 @@ color: #000;
   }
 
   .icon-box {
-    width: 100px; 
+    width: 130px; 
     height: 30px; 
   }
 
@@ -1285,14 +1307,19 @@ color: #000;
 @media (max-width: 500px) {
     .hobbies {
         width: 95%; 
+     
     }
 
     .hobbies button {
         font-size: 12px; 
-        padding: 6px 4px; 
+        padding: 6px 6px; 
         height: 20px; 
+           
+ 
     }
-
+#travelling{
+display: none;
+}
     .hobbies .button-container {
         gap: 10px; 
     }
@@ -1308,7 +1335,7 @@ color: #000;
   }
     .hobbies button {
         font-size: 12px; 
-        padding: 6px 15x; 
+        padding: 6px 11x; 
         height: 10px; 
     }
     
